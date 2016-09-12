@@ -100,7 +100,7 @@ if (NOT TARGET dlib)
          include/dlib/data_io/image_dataset_metadata.cpp)
 
    if (DLIB_ISO_CPP_ONLY)
-      add_library(dlib STATIC ${source_files} )
+      add_library(dlib SHARED ${source_files} )
    else()
 
       set(source_files ${source_files}
@@ -359,7 +359,7 @@ if (NOT TARGET dlib)
       endif()
 
 
-      add_library(dlib STATIC ${source_files} )
+      add_library(dlib SHARED ${source_files} )
       target_link_libraries(dlib ${dlib_needed_libraries} )
 
    endif ()  ##### end of if NOT DLIB_ISO_CPP_ONLY ##########################################################
